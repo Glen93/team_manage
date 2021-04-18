@@ -1,0 +1,81 @@
+pornhub.com 老司机网址
+997725 服务器密码  网页登录
+rpm -qa|grep libaio 查询是否安装
+ 1. 开放端口命令： /sbin/iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+               2.保存：/etc/rc.d/init.d/iptables save
+               3.重启服务：/etc/init.d/iptables restart
+               4.查看端口是否开放：/sbin/iptables -L -n
+
+
+
+本地MySQL路径:/usr/local/Cellar/mysql
+启动mysql :brew services start mysql@5.7
+自己启动:/usr/local/opt/mysql@5.7/bin/mysql.server start
+touch新建文件 mkdir新建文件夹
+
+Command shift p sublime设置编码格式(sumbline)
+
+Redis 路径:/usr/local/Cellar/redis/5.0.3: 13 files, 3.1MB
+
+启动redis
+brew services start redis 后台
+brew services restart redis 重启redis
+redis-server /usr/local/etc/redis.conf 前台启动
+
+ ./redis-cli 启动redis客户端 ./redis-cli --raw 解决字符格式问题
+
+
+
+
+
+
+
+Redis 缓存文件路径 /usr/local/var/db/redis/  dump.rdb
+
+Command T 另开一个终端
+
+命令行启动本地的Tomcat: sudo sh ./startup.sh
+
+
+
+docker使用:
+Docker ps  查看docker使用的容器
+docker rm sdfsl(镜像id) 删除容器
+docker run -d -p 5672:5672 -p 15672:15672 --name rabbitmq rabbitmq:management 启动mq
+
+lsof -i:端口号  查询端口号占用的进程
+
+
+Nginx 命令的使用
+配置文件路径   /usr/local/etc/nginx/nginx.conf 可以改端口
+加载文件 路径 /usr/local/etc/nginx/servers/
+
+后台启动:brew services start nginx
+修改后重启:brew services restart nginx
+启动nginx: nginx
+
+
+//node 启动前端页面
+先进入到要启动的项目的目录
+npm i
+npm run dev
+
+
+
+启动服务器上的FastDFS
+启动tracker
+sudo service fdfs_trackerd start   #停止用stop
+启动storage
+sudo service fdfs_storaged start  # 启动fdfs_storaged服务，停止用stop
+
+
+character-set-server=utf8
+collation-server=utf8_general_ci
+init_connect='SET NAMES utf8'
+
+# client
+[client]
+default-character-set=utf8
+character-set-client=utf8
+[mysql]
+default-character-set=utf8
